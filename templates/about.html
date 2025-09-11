@@ -1,0 +1,199 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+        <!--Page Title-->
+        <section class="page-title" style="background-image:url('{% static "images/background/12.jpg" %}');">
+            <div class="auto-container">
+                <h2>About Us</h2>
+                <div class="separater"></div>
+            </div>
+        </section>
+
+        <!--Breadcrumb-->
+        <div class="breadcrumb-outer">
+            <div class="auto-container">
+                <ul class="bread-crumb text-center">
+                    <li><a href="index.html">Home</a> <span>/</span></li>
+                    <li>About Us</li>
+                </ul>
+            </div>
+        </div>
+        <!--End Page Title-->
+
+        <!-- Welcome Section -->
+<section class="welcome-section">
+  <div class="auto-container">
+    <div class="row clearfix">
+
+      <!-- Content Column -->
+      <div class="content-column col-lg-6 col-md-12 col-sm-12">
+        <div class="inner-column wow bideInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
+          <div class="sec-title-two sec-title">
+            <h2>Welcome <span>To Biticred Speed Logistics </span></h2>
+            <div class="separater"></div>
+          </div>
+          <ul class="list-style-one">
+            <li>
+              <span>100% Safe Delivery</span>
+              We ensure the safe delivery of packages is our top priority. We use high-quality packaging materials and careful handling to ensure items arrive safely and intact.
+            </li>
+            <li>
+              <span>Weather Insurance</span>
+              We understand weather can impact deliveries. That’s why we offer weather insurance to cover losses from hurricanes, floods, heavy snow, and other severe weather events.
+            </li>
+            <li>
+              <span>Fast & On Time Delivery</span>
+              We value reliability and timeliness. Using advanced technologies, skilled professionals, and trusted partners, we ensure fast and efficient delivery worldwide.
+            </li>
+          </ul>
+          <a href="#" class="theme-btn btn-style-four">Read More</a>
+        </div>
+      </div>
+
+      <!-- Image Column -->
+      <div class="image-column col-lg-6 col-md-12 col-sm-12">
+        <div class="inner-column wow bideInRight" data-wow-delay="0ms" data-wow-duration="1500ms">
+          <div class="image">
+            <img src="{% static 'images/resource/welcome.jpg' %}" alt="" />
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+        <!-- End Welcome Section -->
+
+        <!-- bicts Section -->
+        <section class="counter-section" style="background-image:url('{% static "images/background/3.jpg" %}')">
+            <div class="auto-container">
+                <div class="row clearfix">
+
+                    <!-- Order Column -->
+                    <div class="order-column col-lg-6 col-md-12 col-sm-12">
+                        <div class="inner-column" style="background-image:url('{% static "images/background/4.png" %}')">
+                            <div class="icon-box">
+                                <!-- <span class="icon flaticon-bist-delivery"></span> -->
+                            </div>
+                            <h2>Track Your Order</h2>
+                            <div class="text">Enter your Track Id For Instant Search</div>
+
+                            <!--Track Form-->
+                            <div class="track-form">
+                                <form method="get" action="{% url 'track' %}">
+                                    {% csrf_token %}
+                                    <div class="form-group">
+                                        <input type="text" name="tracking-number" value="" placeholder="Tracking ID" required="">
+                                        <button type="submit" class="theme-btn"><span class="bi bi-search"></span></button>
+                                    </div>
+                                </form>
+                            </div>
+
+                            <!-- Social Box -->
+                            <div class="social-box">
+                                <a href="#" class="bi bi-twitter"></a>
+                                <a href="#" class="bi bi-bicebook"></a>
+                                <a href="#" class="bi bi-linkedin"></a>
+                                <a href="#" class="bi bi-google-plus"></a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Counter Column -->
+                    <div class="counter-column col-lg-6 col-md-12 col-sm-12">
+                        <div class="inner-column">
+
+                            <div class="bict-counter">
+                                <div class="clearfix">
+                                    <!--Column-->
+                                    <div class="column counter-column col-lg-6 col-md-6 col-sm-12">
+                                        <div class="inner">
+                                            <div class="content">
+                                                <div class="count-outer count-box counted">
+                                                    <span class="count-text" data-speed="2000" data-stop="61">61</span>
+                                                </div>
+                                                <h4 class="counter-title">Years of Experience</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--Column-->
+                                    <div class="column counter-column col-lg-6 col-md-6 col-sm-12">
+                                        <div class="inner">
+                                            <div class="content">
+                                                <div class="count-outer count-box alternate counted">
+                                                    <span class="count-text" data-speed="2800" data-stop="2500">2500</span>+
+                                                </div>
+                                                <h4 class="counter-title">Professional Workers</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--Column-->
+                                    <div class="column counter-column col-lg-6 col-md-6 col-sm-12">
+                                        <div class="inner">
+                                            <div class="content">
+                                                <div class="count-outer count-box counted">
+                                                    <span class="count-text" data-speed="2500" data-stop="79">79</span>%
+                                                </div>
+                                                <h4 class="counter-title">Areas Covered</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--Column-->
+                                    <div class="column counter-column col-lg-6 col-md-6 col-sm-12">
+                                        <div class="inner">
+                                            <div class="content">
+                                                <div class="count-outer count-box counted">
+                                                    <span class="count-text" data-speed="2000" data-stop="207">207</span>+
+                                                </div>
+                                                <h4 class="counter-title">Countries Covered</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--Column-->
+                                    <div class="column counter-column col-lg-6 col-md-6 col-sm-12">
+                                        <div class="inner">
+                                            <div class="content">
+                                                <div class="count-outer count-box counted">
+                                                    <span class="count-text" data-speed="2000" data-stop="186">186</span>+
+                                                </div>
+                                                <h4 class="counter-title">Corporate Clients</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--Column-->
+                                    <div class="column counter-column col-lg-6 col-md-6 col-sm-12">
+                                        <div class="inner">
+                                            <div class="content">
+                                                <div class="count-outer count-box counted">
+                                                    <span class="count-text" data-speed="2000" data-stop="450">450</span>+
+                                                </div>
+                                                <h4 class="counter-title">Owned Vehicles</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+      
+
+
+
+        {% endblock content %}

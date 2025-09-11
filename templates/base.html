@@ -1,0 +1,334 @@
+
+{% load static %}
+
+
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from nauthemes.net/html/Biticred Speed Logistics/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 30 Mar 2023 06:23:29 GMT -->
+
+<head>
+    <meta charset="utf-8">
+    <title>Biticred Speed Logistics | Homepage</title>
+    <!-- Stylesheets -->
+    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <link href="{% static 'css/responsive.css' %}" rel="stylesheet">
+    <link rel="shortcut icon" href="{% static 'images/bivicon.png' %}" type="image/x-icon">
+    <link rel="icon" href="{% static 'images/bivicon.png' %}" type="image/x-icon">
+
+    <link href=" {% static 'vendor/bootstrap-icons/bootstrap-icons.css'%}" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+    <!-- Responsive -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+    <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
+    <!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
+
+
+
+
+
+</head>
+
+<body class="hidden-bar-wrapper">
+
+
+
+
+    <div class="page-wrapper">
+
+        <!-- Preloader -->
+        <div class="preloader"></div>
+
+        <!-- Main Header / Header Style Two -->
+        <header class="main-header header-style-two">
+            <div class="auto-container">
+                <div class="header-inner">
+                    <!--Header Top-->
+                    <div class="header-top">
+                        <div class="clearfix">
+
+                            <!--Top Right-->
+                            <div class="top-right">
+
+                                <!-- Right List -->
+                                <ul class="right-list">
+                                    <li><span class="bi bi-envelope"></span>info@Biticred Speed Logistics.com</li>
+                                    {% for phone in phones %}
+                                    <li><span class="bi bi-phone"></span> {{phone.number}}</li>
+                                    {% endfor %}
+                                </ul>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!--Header-Upper-->
+                    <div class="header-upper">
+
+                        <div class="clearfix">
+
+                            <div class="pull-left logo-box">
+                                <div class="logo"><a href="{% url 'index' %}"><img src="{% static 'images/logo-white2.png' %}" alt="" title="" style="width: 5em;"> <strong style="color: black;">Biticred Speed Logistics</strong></a>
+                                    </div>
+                            </div>
+
+                            <div class="pull-right upper-right">
+
+                                <!--Header Lower-->
+                                <div class="header-lower">
+
+
+                                    <div class="nav-outer clearfix">
+                                        <!-- Main Menu -->
+                                        <nav class="main-menu navbar-expand-md">
+                                            <div class="navbar-header">
+                                                <!-- Toggle Button -->
+                                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="bilse" aria-label="Toggle navigation">
+													<span class="icon-bar"></span>
+													<span class="icon-bar"></span>
+													<span class="icon-bar"></span>
+												</button>
+                                            </div>
+
+                                            <div class="navbar-collapse collapse clearfix" id="navbarSupportedContent">
+                                                <ul class="navigation clearfix">
+                                                    <li>
+                                                        <div id="google_translate_element"></div>
+
+                                                        <script type="text/javascript">
+                                                            function googleTranslateElementInit() {
+                                                                new google.translate.TranslateElement({
+                                                                    pageLanguage: 'en'
+                                                                }, 'google_translate_element');
+                                                            }
+                                                        </script>
+
+                                                        <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+                                                        <style>
+                                                            #google_translate_element {
+                                                                /*color: transparent;*/
+                                                            }
+
+                                                            #google_translate_element a {
+                                                                display: none;
+                                                            }
+
+                                                            div.goog-te-gadget {
+                                                                /*color: transparent !important;*/
+                                                            }
+                                                        </style>
+                                                    </li>
+                                                    <li class="curren dropdow">
+                                                        <a href="{% url 'index' %}">Home</a>
+                                                    </li>
+                                                    <li><a href="{% url 'about' %}">About</a></li>
+                                                    <li><a href="{% url 'service' %}">Services</a></li>
+                                                    <li><a href="{% url 'contact' %}">Contact</a></li>
+                                                    <li><a href="{% url 'track' %}">Track & Trace</a></li>
+
+                                                </ul>
+                                            </div>
+                                        </nav>
+
+                                        
+                                    </div>
+
+                                </div>
+                                <!--End Header Lower-->
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <!--End Header Upper-->
+                </div>
+            </div>
+
+            <!--Sticky Header-->
+            <div class="sticky-header">
+                <div class="auto-container clearfix">
+                    <!--Logo-->
+                    <div class="logo pull-left">
+                        <a href="{% url 'index' %}" class="img-responsive"><img src="{% static 'images/logo-white2.png' %}" alt="" title="" style="width: 5em;"><strong style="color: black;">Biticred Speed Logistics</strong></a>
+                    </div>
+
+                    <!--Right Col-->
+                    <div class="right-col pull-right">
+                        <!-- Main Menu -->
+                        <nav class="main-menu navbar-expand-md">
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="bilse" aria-label="Toggle navigation">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+
+                            <div class="navbar-collapse collapse clearfix" id="navbarSupportedContent1">
+                                <ul class="navigation clearfix">
+                                    <li class="curren">
+                                        <a href="{% url 'index' %}">Home</a>
+                                    </li>
+                                    <li><a href="{% url 'about' %}">About</a></li>
+                                    <li><a href="{% url 'service' %}">Services</a></li>
+                                    <li><a href="{% url 'contact' %}">Contact</a></li>
+                                    <li><a href="{% url 'track' %}">Track & Trace</a></li>
+                                </ul>
+                            </div>
+                        </nav>
+                        <!-- Main Menu End-->
+                    </div>
+                </div>
+            </div>
+            <!--End Sticky Header-->
+
+        </header>
+        <!--End Main Header -->
+
+
+
+
+
+
+{% block content %}
+{% endblock content %}
+
+
+
+
+
+
+
+
+
+
+        <!--Main Footer-->
+        <footer class="main-footer style-two" style="background-image:url({% static 'images/background/7.png' %})">
+            <div class="auto-container">
+                <!--Widgets Section-->
+                <div class="widgets-section">
+                    <div class="row clearfix">
+
+                        <!--Column-->
+                        <div class="big-column col-lg-6 col-md-12 col-sm-12">
+                            <div class="row clearfix">
+
+                                <!--Footer Column-->
+                                <div class="footer-column col-lg-6 col-md-6 col-sm-12">
+                                    <div class="footer-widget logo-widget">
+                                        <h2><span class="icon bi bi-thumbs-o-up"></span>Useful Links</h2>
+
+                                        <div class="row clearfix">
+                                            <div class="column col-lg-6 col-md-6 col-sm-12">
+                                                <ul class="footer-list">
+                                                    <li><a href="#">About us</a></li>
+                                                    <li><a href="#">Services</a></li>
+                                                    <li><a href="#">Track & trace</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="column col-lg-6 col-md-6 col-sm-12">
+                                                <ul class="footer-list">
+                                                    <li><a href="#">Company</a></li>
+                                                    <li><a href="#">Contact us</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!--Column-->
+                        <div class="big-column col-lg-6 col-md-12 col-sm-12">
+                            <div class="row clearfix">
+
+                                <!--Footer Column-->
+                                <div class="footer-column col-lg-6 col-md-6 col-sm-12">
+                                    <div class="footer-widget mail-widget">
+                                        <h2><span class="icon bi bi-envelope-o"></span>Mailing List</h2>
+                                        <div class="text">Sign up for our mailing list to get latest updates and offers.</div>
+                                        <!-- Email Form -->
+                                        <div class="email-form">
+                                            <form method="post" action="Biticred Speed Logistics/quote.html">
+                                                <div class="form-group clearfix">
+                                                    <input type="email" name="email" value="" placeholder="Email address">
+                                                    <button type="submit" class="theme-btn submit-btn"><span class="icon bi bi-check"></span></button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!--Footer Column-->
+                                <div class="footer-column col-lg-6 col-md-6 col-sm-12">
+                                    <div class="footer-widget about-widget">
+                                        <h2><span class="icon bi bi-person"></span>About Us</h2>
+                                        <div class="text">Biticred Speed Logistics is a global supplier of transport and logistics solutions</div>
+                                        {% for phone in phones %}
+
+                                        <div class="phone-number"> {{phone.number}}</div>
+
+                                        {% endfor %}
+                                        <div class="about-email">info@Biticred Speed Logistics.com</div>
+                                        <!--Social Box-->
+                                        <ul class="social-icon-one">
+                                            <li><a href="#"><span class="bi bi-twitter"></span></a></li>
+                                            <li><a href="#"><span class="bi bi-bicebook"></span></a></li>
+                                            <li><a href="#"><span class="bi bi-linkedin"></span></a></li>
+                                            <li><a href="#"><span class="bi bi-google-plus"></span></a></li>
+                                            <li><a href="#"><span class="bi bi-instagram"></span></a></li>
+                                            <li><a href="#"><span class="bi bi-youtube"></span></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <div class="copyright">Biticred Speed Logistics &copy; 2024 / ALL RIGHTS RESERVED</div>
+            </div>
+
+        </footer>
+
+    </div>
+    <!--End pagewrapper-->
+
+    <!--Scroll to top-->
+    <div class="scroll-to-top scroll-to-target" data-target="html"><span class="bi bi-arrow-up"></span></div>
+
+    <script src="{% static 'js/jquery.js '%}"></script>
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/jquery.mCustomScrollbar.concat.min.js' %}"></script>
+    <script src="{% static 'js/jquery.bincybox.js' %}"></script>
+    <script src="{% static 'js/appear.js' %}"></script>
+    <script src="{% static 'js/owl.js' %}"></script>
+    <script src="{% static 'js/wow.js' %}"></script>
+    <script src="{% static 'js/jquery-ui.js' %}"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+    {% comment %} <script src="//code.tidio.co/4jh84rdxiar2jfnrvfeygnxpqgrc6ewk.js" async></script> {% endcomment %}
+
+</body>
+
+<!-- Mirrored from nauthemes.net/html/Biticred Speed Logistics/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 30 Mar 2023 06:23:48 GMT -->
+
+</html>

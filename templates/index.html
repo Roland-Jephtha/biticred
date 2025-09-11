@@ -1,0 +1,443 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+        <!-- Banner Section Two -->
+        <section class="banner-section-two" style="background-image:url('{% static "images/background/8.jpg" %}')">
+            <div class="auto-container">
+
+                <!-- Content Column -->
+                <div class="content-column">
+                    <div class="inner-column wow slideInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
+                        <h1>WE DELIVER ON TIME </h1>
+                        <div class="text">Join the millions getting bargain deals on shipping cars, <br> furniture, freight, and more..</div>
+
+                        <!-- Banner Form -->
+                        <div class="banner-form-two wow slideInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
+                            <form method="get" action="{% url 'track' %}" autocomplete="off">
+                                {% csrf_token %}
+                                <div class="row clearfix">
+
+                                    <!-- Form Group -->
+                                    <div class="form-group col-lg-8 col-md-6 col-sm-12">
+                                        <input type="text" name="tracking-number" placeholder="Enter Your Track ID" required>
+                                    </div>
+
+                                    <!-- Form Group -->
+                                    <div class="form-group col-lg-4 col-md-12 col-sm-12">
+                                        <button type="submit"  class="theme-btn btn-style-three">Track Now</button>
+                                    </div>
+
+                                </div>
+                            </form>
+                        </div>
+                        <!-- End Banner Form -->
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- End Banner Section Two -->
+
+        <!-- Featured Section -->
+ <!-- Featured Section -->
+<!-- Featured Section (Font Awesome icons + Bootstrap only) -->
+<div class="container py-5">
+  <div class="row g-4 text-center">
+
+    <!-- Air Freight -->
+    <div class="col-lg-6 col-md-6">
+      <div class="card h-100 shadow-sm border-0">
+        <div class="card-body">
+          <i class="fa-solid fa-plane fa-3x mb-3 text-primary" aria-hidden="true"></i>
+          <h4 class="card-title">Air Freight</h4>
+          <p class="card-text">
+            We are a leading air freight service provider with high performance standards.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Road Delivery -->
+    <div class="col-lg-6 col-md-6">
+      <div class="card h-100 shadow-sm border-0">
+        <div class="card-body">
+          <i class="fa-solid fa-truck-fast fa-3x mb-3 text-success" aria-hidden="true"></i>
+          <h4 class="card-title">Road Delivery</h4>
+          <p class="card-text">
+            We specialize in truck loading & cargo delivery with on-time response service.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sea Shipping -->
+    <div class="col-lg-6 col-md-6">
+      <div class="card h-100 shadow-sm border-0">
+        <div class="card-body">
+          <i class="fa-solid fa-ship fa-3x mb-3 text-info" aria-hidden="true"></i>
+          <h4 class="card-title">Sea Shipping</h4>
+          <p class="card-text">
+            One of the biggest shipping companies seen in ports all over the world.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Railway Network -->
+    <div class="col-lg-6 col-md-6">
+      <div class="card h-100 shadow-sm border-0">
+        <div class="card-body">
+          <i class="fa-solid fa-train fa-3x mb-3 text-danger" aria-hidden="true"></i>
+          <h4 class="card-title">Railway Network</h4>
+          <p class="card-text">
+            With our extensive network, we offer efficient delivery through Railways.
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!-- End Featured Section -->
+
+<!-- End Featured Section -->
+
+        <!-- End Welcome Section -->
+
+        <!-- Services Section Two -->
+        <section class="services-section-two">
+            <div class="auto-container">
+                <div class="sec-title centered">
+                    <h3>Our Awesome <span> Services </span></h3>
+                    <div class="separater"></div>
+                </div>
+                <div class="row clearfix">
+                    <!-- Services Block -->
+
+                    <div class="services-block-three col-lg-4 col-md-6 col-sm-12">
+                        <div class="inner-box wow bideInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
+                            <a href="{% url 'contact' %}">
+                            <div class="image">
+                                <img src="{% static 'images/resource/service-1.jpg' %}" alt="" />
+                                <h4>Air Freight</h4>
+                            </div>
+                        </a>
+
+                        </div>
+                    </div>
+
+                    <!-- Services Block -->
+                    <div class="services-block-three col-lg-4 col-md-6 col-sm-12">
+                        <div class="inner-box wow bideInDown" data-wow-delay="0ms" data-wow-duration="1500ms">
+                            <a href="{% url 'contact' %}">
+
+                            <div class="image">
+                                <img src="{% static 'images/resource/service-2.jpg' %}" alt="" />
+                                <h4>Sea Freight</h4>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Services Block -->
+                    <div class="services-block-three col-lg-4 col-md-6 col-sm-12">
+                        <div class="inner-box wow bideInRight" data-wow-delay="0ms" data-wow-duration="1500ms">
+                            <a href="{% url 'contact' %}">
+
+                            <div class="image">
+                                <img src="{% static 'images/resource/service-3.jpg' %}" alt="" />
+                                <h4>Road Freight </h4>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Services Block -->
+                    <div class="services-block-three col-lg-4 col-md-6 col-sm-12">
+                        <div class="inner-box wow bideInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
+                            <a href="{% url 'contact' %}">
+
+                            <div class="image">
+                                <img src="{% static 'images/resource/service-4.jpg' %}" alt="" />
+                                <h4>Courier Services</h4>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Services Block -->
+                    <div class="services-block-three col-lg-4 col-md-6 col-sm-12">
+                        <div class="inner-box wow bideInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
+                            <a href="{% url 'contact' %}">
+
+                            <div class="image">
+                                <img src="{% static 'images/resource/service-5.jpg' %}" alt="" />
+                                <h4>bist Freight </h4>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Services Block -->
+                    <div class="services-block-three col-lg-4 col-md-6 col-sm-12">
+                        <div class="inner-box wow bideInRight" data-wow-delay="0ms" data-wow-duration="1500ms">
+                            <a href="{% url 'contact' %}">
+
+                            <div class="image">
+                                <img src="{% static 'images/resource/service-6.jpg' %}" alt="" />
+                                <h4>Track Cargo</h4>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- End Services Section Two -->
+
+        <!-- Counter Section -->
+        <section class="counter-section" style="background-image:url('{% static "images/background/3.jpg" %}' )">
+            <div class="auto-container">
+                <div class="row clearfix">
+
+                    <!-- Order Column -->
+                    <div class="order-column col-lg-6 col-md-12 col-sm-12">
+                        <div class="inner-column" style="background-image:url('{% static "images/background/4.png" %}')">
+                            <div class="icon-box">
+                                <span class="icon flaticon-bist-delivery"></span>
+                            </div>
+                            <h2>Track Your Order</h2>
+                            <div class="text">Enter your Track Id For Instant Search</div>
+
+                            <!--Track Form-->
+                            <div class="track-form">
+                                <form method="get" action="{% url 'track' %}" autocomplete="off">
+                                    {% csrf_token %}
+
+                                    <div class="form-group">
+                                        <input type="text" name="tracking-number" value="" placeholder="Tracking ID" required="">
+                                        <button type="submit" class="theme-btn"><span class="bi bi-search"></span></button>
+                                    </div>
+                                </form>
+                            </div>
+
+                            <!-- Social Box -->
+                            <div class="social-box">
+                                <a href="#" class="bi bi-twitter"></a>
+                                <a href="#" class="bi bi-bicebook"></a>
+                                <a href="#" class="bi bi-linkedin"></a>
+                                <a href="#" class="bi bi-google-plus"></a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Counter Column -->
+                    <div class="counter-column col-lg-6 col-md-12 col-sm-12">
+                        <div class="inner-column">
+
+                            <div class="bict-counter">
+                                <div class="clearfix">
+                                    <!--Column-->
+                                    <div class="column counter-column col-lg-6 col-md-6 col-sm-12">
+                                        <div class="inner">
+                                            <div class="content">
+                                                <div class="count-outer count-box">
+                                                    <span class="count-text" data-speed="2000" data-stop="60">0</span>
+                                                </div>
+                                                <h4 class="counter-title">Years Experience</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--Column-->
+                                    <div class="column counter-column col-lg-6 col-md-6 col-sm-12">
+                                        <div class="inner">
+                                            <div class="content">
+                                                <div class="count-outer count-box alternate">
+                                                    <span class="count-text" data-speed="2800" data-stop="2500">0</span>+
+                                                </div>
+                                                <h4 class="counter-title">Professional Workers</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--Column-->
+                                    <div class="column counter-column col-lg-6 col-md-6 col-sm-12">
+                                        <div class="inner">
+                                            <div class="content">
+                                                <div class="count-outer count-box">
+                                                    <span class="count-text" data-speed="2500" data-stop="80">0</span>%
+                                                </div>
+                                                <h4 class="counter-title">Areas Covered</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--Column-->
+                                    <div class="column counter-column col-lg-6 col-md-6 col-sm-12">
+                                        <div class="inner">
+                                            <div class="content">
+                                                <div class="count-outer count-box">
+                                                    <span class="count-text" data-speed="2000" data-stop="205">0</span>+
+                                                </div>
+                                                <h4 class="counter-title">Countries Covered</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--Column-->
+                                    <div class="column counter-column col-lg-6 col-md-6 col-sm-12">
+                                        <div class="inner">
+                                            <div class="content">
+                                                <div class="count-outer count-box">
+                                                    <span class="count-text" data-speed="2000" data-stop="180">0</span>+
+                                                </div>
+                                                <h4 class="counter-title">Corporate Clients</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--Column-->
+                                    <div class="column counter-column col-lg-6 col-md-6 col-sm-12">
+                                        <div class="inner">
+                                            <div class="content">
+                                                <div class="count-outer count-box">
+                                                    <span class="count-text" data-speed="2000" data-stop="450">0</span>+
+                                                </div>
+                                                <h4 class="counter-title">Owned Vehicles</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- Testimonial Section -->
+<section class="testimonial-section gap">
+    <div class="auto-container">
+        <div class="sec-title centered">
+            <h3>Client <span>Testimonials</span></h3>
+            <div class="separater"></div>
+        </div>
+        <div class="two-item-carousel owl-carousel owl-theme">
+
+            <!-- Testimonial Block -->
+            <div class="testimonial-block">
+                <div class="inner-box">
+                    <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+                    <div class="text">
+                        I was blown away by the best and efficient service provided by this shipping company. 
+                        My package arrived earlier than expected, and it was in perfect condition. 
+                        I highly recommend their services!
+                    </div>
+                    <div class="author-info">
+                        <div class="info-inner">
+                            <h4>William John</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial Block -->
+            <div class="testimonial-block">
+                <div class="inner-box">
+                    <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+                    <div class="text">
+                        I've been using this shipping company for a while now, and I must say, they never disappoint. 
+                        Their staff are always friendly, and they take great care of my packages. 
+                        I would recommend them to anyone looking for a reliable shipping service.
+                    </div>
+                    <div class="author-info">
+                        <div class="info-inner">
+                            <h4>Kristie Hans</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial Block -->
+            <div class="testimonial-block">
+                <div class="inner-box">
+                    <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+                    <div class="text">
+                        I recently used this shipping company to send a package overseas, and I was impressed by their 
+                        competitive rates and exceptional service. 
+                        My package arrived on time and without any issues. 
+                        I would definitely use their services again.
+                    </div>
+                    <div class="author-info">
+                        <div class="info-inner">
+                            <h4>Mylie Joseph</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial Block -->
+            <div class="testimonial-block">
+                <div class="inner-box">
+                    <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+                    <div class="text">
+                        If you're looking for a shipping company that will handle your packages with care and get them 
+                        to their destination on time, then look no further. 
+                        This shipping company exceeded my expectations and provided outstanding service. 
+                        Thank you!
+                    </div>
+                    <div class="author-info">
+                        <div class="info-inner">
+                            <h4>David Mark</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+        <!-- End Testimonial Section -->
+
+        <section class="fullwidth-section">
+            <div class="outer-container">
+                <div class="clearfix">
+
+
+                    <!-- Left Column -->
+                    <div class="left-column" style="background-image:url('{% static "images/background/5.jpg" %}' )">
+                        <div class="inner-column">
+                            <h3>Are You A Sender?</h3>
+                            <div class="text">We have multiple lucrative packages for the individual senders</div>
+                            <a href="#" class="theme-btn btn-style-one">Check Packages</a>
+                        </div>
+                    </div>
+
+                    <!-- Right Column -->
+                    <div class="right-column" style="background-image:url('{% static "images/background/6.jpg" %}' )">
+                        <div class="inner-column">
+                            <h3>Are You A Shipper?</h3>
+                            <div class="text">Lucrative incentives and bicilities for large scale shipping consignments</div>
+                            <a href="#" class="theme-btn btn-style-two">Contact us</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        {% endblock content%}
