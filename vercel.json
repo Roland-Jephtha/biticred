@@ -2,7 +2,7 @@
 {
     "builds": [
       {
-        "src": "library/wsgi.py",
+        "src": "courier/wsgi.py",
         "use": "@vercel/python",
         "config": { "maxLambdaSize": "15mb", "runtime": "python3.12" }
       },
@@ -21,7 +21,7 @@
       },
       {
         "src": "/(.*)",
-        "dest": "library/wsgi.py"
+        "dest": "courier/wsgi.py"
       }
     ],
     "outputDirectory": "staticfiles_build"
