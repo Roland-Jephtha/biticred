@@ -80,6 +80,53 @@
 				  
 						<div class="container mt-5 mb-5">
 						  <div class="row">
+
+
+
+												  <div class="container">
+						<article class="card">
+							<header class="card-header"> My Shipment / Tracking </header>
+							<div class="card-body">
+								<h6>Tracking ID: {{item.tracking_id}}</h6>
+								<article class="card">
+									<div class="card-body row">
+										<div class="col"> <strong>Estimated Delivery time:</strong> <br> {{item.delivery_date}} </div>
+										<!-- <div class="col"> <strong>Shipping BY:</strong> <br> BLUEDART, | <i class="fa fa-phone"></i> +1598675986 </div> -->
+										<div class="col"> <strong>Status:</strong> <br> {{item.order_status}} </div>
+										<!-- <div class="col"> <strong>Tracking #:</strong> <br> BD045903594059 </div> -->
+									</div>
+								</article>
+								<div class="track">
+									<div class="step active"> <span class="icon"> <i class="bi bi-check"></i> </span> <span class="text">Order confirmed</span> </div>
+									<div class="step active"> <span class="icon"> <i class="bi bi-person"></i> </span> <span class="text"> Picked by courier</span> </div>
+									{% if item.moving == True %}
+									<div class="step active"> <span class="icon"> <i class="bi bi-truck"></i> </span> <span class="text"> In Transit </span> </div>
+									{% else %}
+									<div class="step"> <span class="icon"> <i class="bi bi-truck"></i> </span> <span class="text"> In Transit </span> </div>
+				  
+									{%endif%}
+				  
+									{% if item.ready == True %}
+									
+									<div class="step active"> <span class="icon"> <i class="bi bi-box"></i> </span> <span class="text">Ready for pickup</span> </div>
+									{% else %}
+									<div class="step"> <span class="icon"> <i class="bi bi-box"></i> </span> <span class="text">Ready for pickup</span> </div>
+									{%endif%}
+				  
+								  </div>
+								<ul class="row">
+						 
+					  
+							 
+								</ul>
+							</div>
+						</article>
+					</div>
+					
+					<br><br>
+				  
+
+
 							  <div class="col-lg-6">
 				  
 								<table>
@@ -142,46 +189,7 @@
 				  
 				  </div>
 				  
-					  <div class="container">
-						<article class="card">
-							<header class="card-header"> My Shipment / Tracking </header>
-							<div class="card-body">
-								<h6>Tracking ID: {{item.tracking_id}}</h6>
-								<article class="card">
-									<div class="card-body row">
-										<div class="col"> <strong>Estimated Delivery time:</strong> <br> {{item.delivery_date}} </div>
-										<!-- <div class="col"> <strong>Shipping BY:</strong> <br> BLUEDART, | <i class="fa fa-phone"></i> +1598675986 </div> -->
-										<div class="col"> <strong>Status:</strong> <br> {{item.order_status}} </div>
-										<!-- <div class="col"> <strong>Tracking #:</strong> <br> BD045903594059 </div> -->
-									</div>
-								</article>
-								<div class="track">
-									<div class="step active"> <span class="icon"> <i class="bi bi-check"></i> </span> <span class="text">Order confirmed</span> </div>
-									<div class="step active"> <span class="icon"> <i class="bi bi-person"></i> </span> <span class="text"> Picked by courier</span> </div>
-									{% if item.moving == True %}
-									<div class="step active"> <span class="icon"> <i class="bi bi-truck"></i> </span> <span class="text"> In Transit </span> </div>
-									{% else %}
-									<div class="step"> <span class="icon"> <i class="bi bi-truck"></i> </span> <span class="text"> In Transit </span> </div>
-				  
-									{%endif%}
-				  
-									{% if item.ready == True %}
-									
-									<div class="step active"> <span class="icon"> <i class="bi bi-box"></i> </span> <span class="text">Ready for pickup</span> </div>
-									{% else %}
-									<div class="step"> <span class="icon"> <i class="bi bi-box"></i> </span> <span class="text">Ready for pickup</span> </div>
-									{%endif%}
-				  
-								  </div>
-								<ul class="row">
-						 
-					  
-							 
-								</ul>
-							</div>
-						</article>
-					</div> 
-				  
+
 				  
 				  
 				  
