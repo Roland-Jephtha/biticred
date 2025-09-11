@@ -25,8 +25,22 @@ SECRET_KEY = 'django-insecure-w*w+i=9avkj5uc0)jd*d&l+5+_0^$-b%1l7626^mq2bxddyzl^
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+
+
+
+ALLOWED_HOSTS = ['*']
+
+
+
 import os
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
+
+import pymysql
+pymysql.install_as_MySQLdb()
+
 
 
 # Application definition
@@ -72,6 +86,13 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'courier.wsgi.application'
+
+
+
+
+
+
+
 
 
 # Database
@@ -131,8 +152,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+# MEDIA_URL = '/media/'
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
 
@@ -144,12 +165,78 @@ STATICFILES_DIRS = [
 
 
 
+
+
+STATIC_URL = 'static/'
+
+STATIC_ROOT = os.path.join(BASE_DIR/ 'staticfiles_build', 'static')
+
+# MEDIA_URL = '/media/'
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+
+
+
+
+
+
+
 from django.contrib.messages import constants as messages
 MESSAGE_TAGS = {
     messages.ERROR: 'danger',
     messages.SUCCESS: 'success',
     messages.WARNING: 'warning',
 }
+
+
+
+
+
+
+
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'defaultdb',  # Database name
+        'USER': 'avnadmin',   # MySQL username
+        'PASSWORD': 'AVNS_1UosaWGg8hW-a8XP9oJ',  # MySQL password
+        'HOST': 'biticred-foodproject730-19f0.g.aivencloud.com',  # MySQL Host
+        'PORT': '17142',  # MySQL Port
+        'OPTIONS': {
+            'ssl': {'ssl-mode': 'REQUIRED'},  # Enable SSL
+        },
+    }
+}
+
+
+
+
+
+
+
+
+CLOUDINARY_STORAGE ={
+    'CLOUD_NAME': 'dx67lmaku',
+    'API_KEY' : '223338436211385',
+    'API_SECRET' : 'F-Iel3L-Kw1fHzy1xEhgkGunRPw',
+    'API_PROXY' : "http://proxy.server:3128"
+}
+
+
+#  cloudinary.config(
+#     cloud_name ='dx67lmaku',
+#     api_key = '223338436211385',
+#     api_secret =  'F-Iel3L-Kw1fHzy1xEhgkGunRPw',
+#     api_proxy = "http://proxy.server:3128"
+
+# )
+
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
+
+
+
 
 
 
